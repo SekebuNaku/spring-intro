@@ -9,11 +9,9 @@ public class MyApp {
 
         MessageService messageServiceA = applicationContext.getBean("messageService", MessageService.class);
         MessageService messageServiceB = applicationContext.getBean("messageService", MessageService.class);
-
-        System.out.println("First messange: " + messageServiceA.hashCode());
-        System.out.println("Second messange: " + messageServiceB.hashCode());
-
         MessageService messageServiceC = applicationContext.getBean("randomMessageService", MessageService.class);
+
+        System.out.println("Hashcodes comparition: " + messageServiceA.hashCode()+" "+messageServiceB.hashCode());
 
         System.out.println(messageServiceA.getMessage());
         System.out.println(messageServiceC.getMessage());
